@@ -1,6 +1,6 @@
 #' Compute Almond Yield
 #'
-#' computes almond yield anomalies
+#' computes almond yield anomolies
 #' @param  clim climate data frame
 #' as daily (day, month, year, tmin_C, tmax_C, precip )
 #' @param  Tmincoeff1 default=-0.015
@@ -8,10 +8,9 @@
 #' @param  Pcoeff1 default=-0.07
 #' @param  Pcoeff2 default=0.0043
 #' @author Naomi Tague
-#' @adapted by Hannah Garcia
 #' @references D.B. Lobell et al. Agricultural and Forest Meteorology 141 (2006) 208–218.
 #' @return
-#' almond yield (anomaly from California mean in ton/acre, mean, maximum and mininum yields
+#' almond yield (anomoly from California mean in ton/acre, mean, maximum and mininum yields
 #'
 #'
 compute_almond_yield = function(clim,Tmincoeff1=-0.015, Tmincoeff2=-0.0046, Pcoeff1=-0.07, Pcoeff2=0.0043, intercep=0.28) {
@@ -32,4 +31,8 @@ compute_almond_yield = function(clim,Tmincoeff1=-0.015, Tmincoeff2=-0.0046, Pcoe
   
   return(list(sdyield=sd(yield), meanyield=mean(yield)))
 }
+
+
+#  return(list(maxyield=max(yield), minyield=min(yield), meanyield=mean(yield)))
+
 
