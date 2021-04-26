@@ -1,8 +1,10 @@
 ---
-title: "Assignment #4: Sensitivity Analysis"
+title: 'Assignment #4: Sensitivity Analysis'
 author: "Hannah Garcia-Wickstrum"
 date: "4/21/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -11,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(sensitivity)
 library(tidyverse)
 library(pse)
+library(tinytex)
 ```
 
 ### Latin Hypercube Sensitivity Analysis 
@@ -65,4 +68,4 @@ pse::plotprcc(sens_almond)
 sens_almond$prcc
 ```
 
-Based on the scatter and PRCC plots, the more sensitive parameter is **enter here**
+Based on the scatter and PRCC plots, **Pcoeff2** contributes more to paramter uncertainty. 
